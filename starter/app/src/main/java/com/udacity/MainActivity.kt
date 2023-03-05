@@ -48,16 +48,7 @@ class MainActivity : AppCompatActivity() {
                     download(RETROFIT_URL, getString(R.string.text_download_option_retrofit))
                 }
                 else -> {
-                    startActivity(Intent(applicationContext, DetailActivity::class.java).apply {
-                        putExtras(
-                            bundleOf(
-                                DetailActivity.EXTRA_KEY_REPO_NAME to "askdmasd",
-                                DetailActivity.EXTRA_KEY_DOWNLOAD_SUCCESS to true,
-                                DetailActivity.EXTRA_KEY_NOTIFICATION_ID to 1
-                            )
-                        )
-                    })
-                    //showToast(R.string.text_toast_select_file_to_download)
+                    showToast(R.string.text_toast_select_file_to_download)
                 }
             }
         }
